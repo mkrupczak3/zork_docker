@@ -12,4 +12,7 @@ RUN rm /zorkzip/zork1.zip
 RUN mkdir /zorkdata/
 RUN mv /zorkzip/DATA/ZORK1.DAT /zorkdata/ZORK1.DAT
 RUN rm -rf /zorkzip/
-CMD frotz /zorkdata/ZORK1.DAT
+RUN adduser -Ds /bin/sh frotz
+RUN chown frotz -R /zorkdata
+USER frotz
+CMD /usr/frotz /zorkdata/ZORK1.DAT
