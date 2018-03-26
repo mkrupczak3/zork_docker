@@ -2,7 +2,6 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y git wget unzip
 # interpreter for zork on linux
-CMD ["apt-get", "install", "-y", "frotz"]
 RUN mkdir /zorkzip/
 # download game
 # we need to spoof our user agent so we don't get rejected
@@ -15,4 +14,5 @@ RUN rm -rf /zorkzip/
 RUN useradd -ms /bin/bash frotz
 RUN chown frotz -R /zorkdata
 USER frotz
-CMD ["bash" "/usr/games/frotz" "/zorkdata/ZORK1.DAT"]
+CMD ["apt-get", "install", "-y", "frotz"]
+CMD /usr/games/frotz /zorkdata/ZORK1.DAT
