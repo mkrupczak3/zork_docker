@@ -15,4 +15,4 @@ RUN rm -rf /zorkzip/
 RUN useradd -ms /bin/bash frotz
 RUN chown frotz -R /zorkdata
 USER frotz
-CMD /usr/frotz /zorkdata/ZORK1.DAT
+CMD /usr/games/frotz /zorkdata/ZORK1.DAT
