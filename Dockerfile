@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt-get update
-RUN apt-get install -y git wget
+RUN apt-get install -y git wget unzip
 # interpreter for zork on linux
 RUN apt-get install -y frotz
 RUN mkdir /zorkzip/
