@@ -12,4 +12,4 @@ RUN rm /zorkzip/zork1.zip
 RUN mkdir /zorkdata/
 RUN mv /zorkzip/DATA/ZORK1.DAT /zorkdata/ZORK1.DAT
 RUN rm -rf /zorkzip/
-RUN frotz /zorkdata/ZORK1.DAT
+CMD ["frotz", "/zorkdata/ZORK1.DAT"]
